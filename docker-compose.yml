@@ -1,0 +1,11 @@
+version: '2'
+services:
+  # ddns-update
+  ddns-update:
+    restart: always
+    build: ./
+    environment:
+      ACCOUNT: someaccount
+      DOMAIN: somedomain
+      PASSWORD: password
+
