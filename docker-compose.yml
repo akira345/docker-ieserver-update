@@ -3,7 +3,7 @@ services:
   # ddns-update
   ddns-update:
     restart: always
-    build: ./
+    image: akira345/ieserver_update:latest
     environment:
       ACCOUNT: someaccount
       DOMAIN: somedomain

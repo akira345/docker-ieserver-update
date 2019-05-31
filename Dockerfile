@@ -5,7 +5,7 @@ ENV DOMAIN somedomain
 ENV PASSWORD password
 
 # cronとwgetをインストール
-RUN apt-get -y update && apt-get -y upgrade && apt-get install -y cron wget 
+RUN apt-get -y update && apt-get install -y cron wget && rm -r /var/lib/apt/lists/*
 
 # 更新用Perlスクリプトを準備
 COPY ./ddns-update.pl /opt
